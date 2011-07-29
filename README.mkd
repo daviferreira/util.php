@@ -1,0 +1,3 @@
+# util.php
+
+A set of PHP utility/helper functions
