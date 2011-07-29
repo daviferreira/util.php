@@ -5,7 +5,6 @@
  *
  * @param String $location URL or path to redirect
  * @return void
- * @author Davi Ferreira
  **/
 function redirect_to($location){
 	if(!headers_sent())
