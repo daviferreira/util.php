@@ -35,4 +35,7 @@ class DirAndFileTest extends UnitTestCase{
     $this->assertTrue(is_dir($this->dir1));
   }
 
+  function test_remove_invalid_directory(){
+    $this->assertFalse(remove_directory("invalid"));
+  }
 }
