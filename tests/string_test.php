@@ -2,6 +2,7 @@
 require_once TESTS_DIR."/../random_string.php";
 require_once TESTS_DIR."/../slugify.php";
 require_once TESTS_DIR."/../snippet_chars.php";
+require_once TESTS_DIR."/../snippet_words.php";
 require_once TESTS_DIR."/../strip_accents.php";
 
 class StringTest extends UnitTestCase{
@@ -29,4 +30,9 @@ class StringTest extends UnitTestCase{
     $this->assertEqual(snippet_chars($str, 0, 10), "This strin &hellip;");
   }
 
+  function test_snippet_words(){
+    $str = "This string wants to be transformed into a snippet!";
+    $this->assertTrue(snippet_words($str, 4, ' +'));
+    $this->assertEqual(snippet_words($str, 4, ' +'), "This string wants to +");
+  }
 }
