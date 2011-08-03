@@ -16,5 +16,6 @@ class AllTests extends TestSuite{
     $this->addFile(TESTS_DIR."/string_test.php");
     $this->addFile(TESTS_DIR."/dir_and_file_test.php");
     $this->addFile(TESTS_DIR."/redirect_test.php");
+    $this->addFile(TESTS_DIR."/force_download_test.php");
   }
 }
